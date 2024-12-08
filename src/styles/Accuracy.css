@@ -1,0 +1,84 @@
+.benefits-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  background: linear-gradient(to right, #E6E6E6, #d4d3d3, #B6BCC8);
+  padding: 30px 40px;
+  border-top: 1px solid #ccc;
+  gap: 20px; /* Add gap between items */
+}
+
+.benefit {
+  flex-basis: calc(33% - 20px); /* Dynamic width for 3 items with gap */
+  text-align: center;
+  margin: 10px 0; /* Add margin for spacing */
+}
+
+.percentage {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a458c6;
+  margin-bottom: 10px;
+}
+
+.benefit h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 20px; /* Reduce padding for smaller screens */
+    gap: 15px;
+  }
+
+  .benefit {
+    flex-basis: calc(50% - 15px); /* Two items per row */
+    text-align: center;
+  }
+
+  .percentage {
+    font-size: 2rem;
+  }
+
+  .benefit h3 {
+    font-size: 1rem;
+  }
+
+  .benefit p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-section {
+    padding: 15px; /* Further reduce padding */
+    gap: 10px;
+  }
+
+  .benefit {
+    flex-basis: 100%; /* Single item per row */
+  }
+
+  .percentage {
+    font-size: 1.8rem;
+  }
+
+  .benefit h3 {
+    font-size: 0.9rem;
+  }
+
+  .benefit p {
+    font-size: 0.8rem;
+  }
+}

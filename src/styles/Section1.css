@@ -1,0 +1,89 @@
+.outer {
+  display: flex;
+  gap: 20px; /* Add space between the inner boxes */
+  justify-content: space-evenly;
+  background: linear-gradient(to right, #E6E6E6, #d4d3d3, #B6BCC8);
+  padding: 20px; /* Add padding for better spacing */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  width: 450px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white; /* Set a contrasting background for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.inner:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Emphasize shadow on hover */
+}
+
+h5 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 7px;
+}
+
+p {
+  margin: 3px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center; /* Center-align text for better readability */
+}
+
+/* Responsive Design */
+@media (max-width > 768px) {
+  .inner{
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (max-width < 768px) {
+  .inner {
+    width: 150px; /* Reduce size of inner boxes */
+    height: 150px;
+    padding: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .outer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  
+
+  h5 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  p {
+    font-size: 0.85rem; /* Adjust paragraph size */
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    width: 200px; /* Further reduce size for very small screens */
+    height: 200px;
+    padding: 6px;
+  }
+
+  h5 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
